@@ -1,5 +1,4 @@
-
-export function fetchCountries(name) {
-  const url = `https://restcountries.com/v2/name/${name}?fields=name,capital,population,flag,languages`;
-return fetch(url).then((response) => response.json());
-}
+export default function fetchCountries(searchQuery) {
+  const URL = `https://restcountries.com/v3.1/name/${searchQuery}?fields=flags,name,capital,languages,population`;
+      return fetch(URL)       
+  }
